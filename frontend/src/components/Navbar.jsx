@@ -62,6 +62,20 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3 gap-1">
             <li className="nav-item">
               <Link 
+                to="/#studio" 
+                className="nav-link px-3 py-2 rounded-2 d-flex align-items-center gap-1 text-primary fw-bold"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  const el = document.getElementById('studio');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                <Sparkles size={18} />
+                Instant AI Matcher
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link 
                 to="/browse" 
                 className={`nav-link px-3 py-2 rounded-2 d-flex align-items-center gap-1 ${isActive('/browse') ? 'text-primary fw-bold bg-light' : 'text-secondary'}`}
                 onClick={() => setMobileMenuOpen(false)}

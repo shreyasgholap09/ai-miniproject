@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import client from '../api/client';
 import ReportCard from '../components/ReportCard';
+import SimpleMatcherStudio from '../components/SimpleMatcherStudio';
 import { 
   Sparkles, 
   Search, 
@@ -115,6 +116,13 @@ const LandingPage = () => {
               <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Instant Simple AI Matcher Studio Section */}
+      <section className="py-4" id="studio" style={{ backgroundColor: '#f1f5f9' }}>
+        <div className="container py-2">
+          <SimpleMatcherStudio />
         </div>
       </section>
 
